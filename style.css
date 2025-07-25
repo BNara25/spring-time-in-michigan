@@ -1,4 +1,4 @@
-/* General Page Styles */
+/* === General Page Styles === */
 body {
   font-family: Arial, sans-serif;
   background-color: #083d77;
@@ -7,6 +7,28 @@ body {
   padding: 0;
 }
 
+/* === Skip to Main Content === */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+}
+
+/* === Header Styles === */
 header {
   background-color: #052c4d;
   padding: 20px;
@@ -18,12 +40,14 @@ header img {
   margin-top: 10px;
 }
 
+/* === Heading === */
 h1 {
   font-size: 2em;
   margin-top: 10px;
   color: #f4d35e;
 }
 
+/* === Navigation === */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -33,9 +57,10 @@ nav ul {
   margin-bottom: 15px;
 }
 
-nav ul li {
+/* Commented out per Part 2 instructions */
+/* nav ul li {
   display: inline;
-}
+} */
 
 nav a {
   text-decoration: none;
@@ -47,6 +72,18 @@ nav a:hover {
   color: #f4d35e;
 }
 
+/* === Part 2: Navigation container styles === */
+nav {
+  display: inline-block;
+  width: 80%;
+}
+
+/* === Part 2: Style only nav image === */
+nav img {
+  width: 10%;
+}
+
+/* === Main Content === */
 main {
   padding: 20px;
   text-align: center;
@@ -63,6 +100,7 @@ main a {
   text-decoration: underline;
 }
 
+/* === Footer === */
 footer {
   background-color: #052c4d;
   color: #ccc;
@@ -71,6 +109,7 @@ footer {
   margin-top: 30px;
   font-size: 0.9em;
 }
+
 footer a,
 footer a:visited,
 footer a:hover,
@@ -79,7 +118,7 @@ footer a:active {
   text-decoration: underline;
 }
 
-/* Image gallery */
+/* === Image Gallery === */
 main div {
   display: flex;
   flex-wrap: wrap;
@@ -99,4 +138,26 @@ main img {
 main img:hover {
   transform: scale(1.05);
   border-color: #f4d35e;
+}
+
+/* === Part 2: Grid Class === */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 20px;
+}
+
+/* === Part 2: Style Only Images in .grid === */
+.grid img {
+  width: 100%;
+}
+
+/* === Part 2: Flex Class === */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
